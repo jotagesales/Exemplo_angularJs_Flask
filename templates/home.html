@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="app" ng-controller="controllerAngular">
+    <h1 align="center">Exemplo preechimento automático usando angularJS</h1>
+    <form>
+        <label>Nome:</label>
+        <input type="text" ng-model="pessoa.nome">
+        <label>Cidade:</label>
+        <input type="text" ng-model="pessoa.cidade">
+        <label>Estado:</label>
+        <input type="text" maxlength="2" ng-model="pessoa.estado">
+
+
+        <input type="submit" value="Consultar dados no servidor" ng-click="consultar()">
+    </form>
+
+    <script src="{{ url_for('static', filename='angular.min.js') }}"></script>
+
+    <!-- Importando o javascrip no template -->
+    <script src="{{ url_for('static', filename='ajax_angular.js') }}"></script>
+</body>
+</html>
